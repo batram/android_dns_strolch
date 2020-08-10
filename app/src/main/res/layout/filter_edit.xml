@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditFilter">
+
+    <TextView
+        android:id="@+id/filterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/filterTitle"
+        app:layout_constraintTop_toBottomOf="@+id/filterTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filterTextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="*.something.com"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/filterSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hardcodedIPtextInputLayout" />
+
+    <RadioGroup
+        android:id="@+id/filterTypeSelection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <TextView
+            android:id="@+id/filterTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter Type:" />
+
+        <RadioButton
+            android:id="@+id/filterTypeAllowed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_fingerprint_black_24dp"
+            android:text="@string/title_allowed" />
+
+        <RadioButton
+            android:id="@+id/filterTypeHardcoded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableEnd="@drawable/ic_swap_calls_black_24dp"
+            android:text="Hardcoded" />
+
+        <RadioButton
+            android:id="@+id/filterTypeTMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableEnd="@drawable/ic_timer_black_24dp"
+            android:text="Tmp" />
+
+        <RadioButton
+            android:id="@+id/filterTypeHashed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableEnd="@drawable/ic_grid_on_black_24dp"
+            android:text="Hashed" />
+
+        <RadioButton
+            android:id="@+id/filterTypeIgnored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_security_black_24dp"
+            android:text="Ignored" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/filterTitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="HardCoded IP:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterTypeSelection" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hardcodedIPtextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/filterTitle"
+        app:layout_constraintTop_toBottomOf="@+id/filterTitle2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hardcodedIPTextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="127.0.0.1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/filterRemoveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        app:layout_constraintEnd_toStartOf="@+id/filterSaveButton"
+        app:layout_constraintTop_toTopOf="@+id/filterSaveButton" />
+
+    <ToggleButton
+        android:id="@+id/filterStateToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:text="ToggleState"
+        app:layout_constraintEnd_toEndOf="@+id/filterRemoveButton"
+        app:layout_constraintTop_toTopOf="@+id/filterSaveButton" />
+
+    <Button
+        android:id="@+id/filterHashButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="#"
+        app:layout_constraintEnd_toStartOf="@+id/filterStateToggle"
+        app:layout_constraintTop_toTopOf="@+id/filterSaveButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

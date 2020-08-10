@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DNS Strolch</string>
+    <string name="title_allowed">Allowed</string>
+    <string name="title_dashboard">Fresh</string>
+    <string name="title_notifications">Ignored</string>
+    <string name="connect">Connect</string>
+</resources>

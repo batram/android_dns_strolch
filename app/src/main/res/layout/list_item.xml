@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/filterStatusIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:foregroundGravity="top"
+        android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemDomain"
+        app:srcCompat="@drawable/ic_blocked_no_filter_24dp" />
+
+    <ImageView
+        android:id="@+id/filterSecondaryStatus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:foregroundGravity="top"
+        android:scaleType="fitEnd"
+        android:translationZ="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/filterStatusIcon"
+        app:layout_constraintTop_toTopOf="@+id/itemDomain"
+        app:srcCompat="@drawable/snowflake" />
+
+    <TextView
+        android:id="@+id/itemDomain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_weight="1"
+        android:alpha="1"
+        android:background="@drawable/listitem_background"
+        android:clickable="true"
+        android:paddingVertical="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="100dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/itemDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Some date" />
+
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemDomain" />
+
+    <TextView
+        android:id="@+id/filterHits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/filterSecondaryStatus"
+        app:layout_constraintTop_toTopOf="@+id/filterSecondaryStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

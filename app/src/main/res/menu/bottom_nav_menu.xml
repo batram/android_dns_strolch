@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_allowed"
+        android:icon="@drawable/ic_fingerprint_black_24dp"
+        android:title="Allow" />
+
+    <item
+        android:id="@+id/navigation_fresh"
+        android:icon="@drawable/ic_view_headline_black_24dp"
+        android:title="Fresh" />
+
+    <item
+        android:id="@+id/navigation_ignored"
+        android:icon="@drawable/ic_security_black_24dp"
+        android:title="Ignore" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_applications_black_24dp"
+        android:title="Settings" />
+</menu>
