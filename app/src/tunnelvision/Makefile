@@ -18,7 +18,7 @@ armv7-linux-androideabi: cargo-ndk
 	cp target/armv7-linux-androideabi/release/libtunnelvision.so  $(SODIR)
 
 #rustup target install x86_64-linux-android
-x86_64-linux-android : SODIR := ../main/jniLibs/x86-64/
+x86_64-linux-android : SODIR := ../main/jniLibs/x86_64/
 x86_64-linux-android: cargo-ndk
 	cargo ndk --platform 21 --target x86_64-linux-android build --release
 	[ -d $(SODIR) ] || mkdir -p $(SODIR)
