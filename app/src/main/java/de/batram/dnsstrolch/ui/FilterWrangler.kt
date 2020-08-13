@@ -174,22 +174,8 @@ class FilterWrangler(applicationContext: Context) {
 
     private fun getDefaultList(): MutableSet<String> {
         var default_list = """
-        *.github.io
-        *.githubassets.com
-        *.githubusercontent.com
-        *.googlevideo.com
-        *.rust-lang.org
-        *.stackexchange.com
-        *.wikipedia.org
-        *.ytimg.com
-        !detectportal.firefox.com
-        !push.services.mozilla.com
-        !content-signature-2.cdn.mozilla.net
-        !www.microsoft.com
-        !uhf.microsoft.com
-        tools.ietf.org
         """
-        //TODO: remove me after resque
+
         default_list = sharedPref.getString("filter_list", default_list).toString()
 
         var defaultStringList = mutableSetOf<String>();
