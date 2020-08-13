@@ -1,6 +1,6 @@
 [package]
 name = "tunnelvision"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["batram <ym@batr.am>"]
 edition = "2018"
 
@@ -23,6 +23,7 @@ state = { version = "0.2", features = ["tls"] }
 state_list = { git = "https://github.com/batram/state_list" }
 tld = "2.10.0"
 seahash = ""
+dns_strolch = { git = "https://github.com/batram/dns_strolch"}
 
 [target.'cfg(target_os = "android")'.dependencies]
 android_logger = "0.8"
